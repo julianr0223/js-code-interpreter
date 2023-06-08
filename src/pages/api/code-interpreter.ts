@@ -1,14 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { SandboxBody  } from '../../services/model/SandboxModel'
-import { getCodeSandbox } from '../../services/codeinterpreterService'
+import { SandboxBody } from '@/services/model/SandboxModel'
+import { getCodeSandbox } from '@/services/codeinterpreterService'
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === 'POST') {
-    const code = 'console.log("Código de prueba")'
-    // const body = req.body.content
+  if (req.method === 'POST') {    
+    const code = req.body.code    
 
     // TODO: verificar si chatgpt puede crear este body
     const body: SandboxBody = {

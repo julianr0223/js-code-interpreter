@@ -1,0 +1,19 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "JS code interpreter",
+    "name_for_model": "jsCodeInterpreter",
+    "description_for_human": "Create a code interpreter for js with an example in code sandbox.",
+    "description_for_model": "This plugin enables the creation of sandboxes on CodeSandbox directly from a Next.js application. It provides an API endpoint that accepts a file structure and dependencies in JSON format, then makes a POST request to the CodeSandbox API to create a new sandbox with those files and dependencies. Finally, the plugin returns a link to the newly created sandbox. This can be useful for developers who want to generate live code examples on CodeSandbox directly from their own applications or websites.",
+    "auth": {
+      "type": "none"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "http://localhost:3000/openapi.yaml",
+      "is_user_authenticated": false
+    },
+    "logo_url": "PLUGIN_HOSTNAME/logo.png",
+    "contact_email": "support@example.com",
+    "legal_info_url": "https://example.com/legal"
+  }
+  
