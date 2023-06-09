@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JS Code interpreter Plugin
+
+This project is a REST API created with Next.js designed to be used in the creation of a chatGPT plugin. The API exposes a POST endpoint that allows you to send JavaScript code. This code is sent to CodeSandbox, which in turn returns a link to a project that implements the sent JavaScript code.
 
 ## Getting Started
 
-First, run the development server:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Node.js (version 16 or higher)
+- npm
+- Docker (optional)
+
+### Installing
+
+Clone the repository to your local machine:
+
+```bash
+git clone git@github.com:julianr0223/js-code-interpreter.git
+```
+
+Navigate into the project directory:
+
+```bash
+cd js-code-interpreter
+```
+
+Install the project dependencies:
+
+```bash
+npm install
+```
+
+### Running the Application locally
+
+You can run the application locally using npm:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Alternatively, you can use Docker to build and run the application:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+docker build -t <your-image-name> .
+docker run -p 3000:3000 <your-image-name>
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Now, the application should be running at `http://localhost:3000`.
 
-## Learn More
+## API Usage
 
-To learn more about Next.js, take a look at the following resources:
+To use the API, make a POST request to the `/api/code-interpreter` with your JavaScript code in the request body.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"code":"your-js-code-here"}' http://localhost:3000/api/endpoint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+A json body could be.
 
-## Deploy on Vercel
+```json
+{
+    "code": "console.log('This was created to run with code sandbox')"
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The API will return a response containing a link to the CodeSandbox project implementing your code.
