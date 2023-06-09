@@ -54,7 +54,7 @@ Now, the application should be running at `http://localhost:3000`.
 To use the API, make a POST request to the `/api/code-interpreter` with your JavaScript code in the request body.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{"code":"your-js-code-here"}' http://localhost:3000/api/endpoint
+curl -X POST -H "Content-Type: application/json" -d '{"code":"your-js-code-here"}' http://localhost:3000/api/code-interpreter
 ```
 
 A json body could be.
