@@ -6,7 +6,7 @@ info:
 servers:
   - url: http://localhost:3000
     descripton: localhost server
-  - url: https://sandbox-api.com/v1
+  - url: https://urchin-app-2shng.ondigitalocean.app
     descripton: Sandbox server
 paths:
   /api/code-interpreter:    
