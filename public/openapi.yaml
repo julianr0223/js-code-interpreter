@@ -21,16 +21,15 @@ paths:
       responses:
         "200":
           description: OK
-    
 
 components:
   schemas:    
     createCodeSandboxRequest:
       type: object
       required:
-      - todo
+      - code
       properties:
-        todo:
+        code:
           type: string
-          description: The todo to add to the list.
+          description: The JS code to create a code Sandbox
           required: true    
