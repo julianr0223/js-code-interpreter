@@ -9,7 +9,7 @@
     },
     "api": {
       "type": "openapi",
-      "url": "http://localhost:3000/openapi.yaml",
+      "url": "https://urchin-app-2shng.ondigitalocean.app/openapi.yaml",
       "is_user_authenticated": false
     },
     "logo_url": "PLUGIN_HOSTNAME/logo.png",
