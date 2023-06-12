@@ -3,10 +3,8 @@ info:
   title: JS Code Interpreter with code sandbox
   description: A plugin that allows the user to create a JS project in code sandbox using ChatGPT.
   version: 'v1'
-servers:
-  - url: http://localhost:3000
-    descripton: localhost server
-  - url: https://urchin-app-2shng.ondigitalocean.app
+servers:  
+  - url: https://urchin-app-2shng.ondigitalocean.app/
     descripton: Sandbox server
 paths:
   /api/code-interpreter:    
