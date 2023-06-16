@@ -7,8 +7,23 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === 'POST') {    
-    const body = req.body
-    console.log(body)
+    const code = req.body.code    
+
+    // TODO: verificar si chatgpt puede crear este body
+    const body: SandboxBody = {
+        files: {
+          'index.js': {
+            content: code,
+            isBinary: false,
+          },
+          'package.json': {
+            content: {
+              dependencies: {}
+            },
+          },
+        },
+      }
+      
     const response = await getCodeSandbox(body)           
     res.status(200).json(response)
   } else {    
