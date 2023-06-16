@@ -25,11 +25,11 @@ paths:
 components:
   schemas:    
     createCodeSandboxRequest:
-      type: object
-      required:
-      - code
+      type: object      
       properties:
-        code:
-          type: string
+        files:
+          type: object
           description: The JS code to create a code Sandbox
           required: true    
+      required:
+        - files
