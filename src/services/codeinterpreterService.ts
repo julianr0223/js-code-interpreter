@@ -3,6 +3,10 @@ import { SandboxBody, SandboxResponse } from './model/SandboxModel'
 
 export const getCodeSandbox: any = async(body: SandboxBody) => {
     const codeSandboxApiURL = 'https://codesandbox.io/api/v1/sandboxes/define?json=1'
+
+    console.log('BODY: ')
+    console.log(body)
+
     const response = await fetch(codeSandboxApiURL, {
         method: 'POST',
         headers: {

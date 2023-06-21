@@ -6,12 +6,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === 'POST') {    
-    const body = req.body
-    const response = await getCodeSandbox(body)           
-    res.status(200).json(response)
+  if (req.method === 'GET') {        
+    res.status(200).json('this is a chat GPT plugin to create code sanboxes ...')
   } else {    
-    res.setHeader('Allow', 'POST')
+    res.setHeader('Allow', 'GET')
     res.status(405).end('Method Not Allowed')
   }
 }

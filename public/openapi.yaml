@@ -4,14 +4,13 @@ info:
   description: A plugin that allows the user to create a JS project in code sandbox using ChatGPT.
   version: 'v1'
 servers:  
-  - url: https://urchin-app-2shng.ondigitalocean.app/
+  - url: https://js-code-interpreter.vercel.app/
     descripton: Sandbox server
 paths:
   /api/code-interpreter:    
     post:
-      operationId: create codeSandBox
-      summary: Create codeSandbox 
-      parameters:
+      operationId: codeSandBox
+      summary: Create codeSandbox       
       requestBody:
         required: true
         content:

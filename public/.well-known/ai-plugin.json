@@ -3,13 +3,13 @@
     "name_for_human": "JS code interpreter",
     "name_for_model": "jsCodeInterpreter",
     "description_for_human": "Create a code interpreter for js with an example in code sandbox.",
-    "description_for_model": "This plugin enables the creation of sandboxes on CodeSandbox directly from a Next.js application. It provides an API endpoint that accepts a file structure and dependencies in JSON format, then makes a POST request to the CodeSandbox API to create a new sandbox with those files and dependencies. Finally, the plugin returns a link to the newly created sandbox. This can be useful for developers who want to generate live code examples on CodeSandbox directly from their own applications or websites.",
+    "description_for_model": "Este plugin permite la creación de sandboxes en CodeSandbox directamente desde una aplicación Next.js. Proporciona un punto final de API que acepta una estructura de archivos y dependencias en formato JSON. Para interactuar con este plugin, ChatGPT debe generar una solicitud POST que contenga un objeto JSON en el cuerpo de la solicitud. Este objeto JSON debe contener la estructura de archivos y las dependencias requeridas por la API de CodeSandbox. La solicitud POST se realiza a la API de CodeSandbox para crear un nuevo sandbox con esos archivos y dependencias. Finalmente, el plugin devuelve un enlace al sandbox recién creado. Esto puede ser útil para los desarrolladores que quieran generar ejemplos de código en vivo en CodeSandbox directamente desde sus propias aplicaciones o sitios web.",
     "auth": {
       "type": "none"
     },
     "api": {
       "type": "openapi",
-      "url": "https://urchin-app-2shng.ondigitalocean.app/openapi.yaml",
+      "url": "https://js-code-interpreter.vercel.app/openapi.yaml",
       "is_user_authenticated": false
     },
     "logo_url": "PLUGIN_HOSTNAME/logo.png",
